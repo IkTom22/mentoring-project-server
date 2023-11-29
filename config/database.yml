@@ -79,6 +79,7 @@ test:
 #
 production:
   <<: *default
-  database: mentoring_project_server_prod
-  username: server
-  password: <%= ENV["SERVER_DATABASE_PASSWORD"] %>
+  # database: mentoring_project_server_prod
+  # username: server
+  # password: <%= ENV["SERVER_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
