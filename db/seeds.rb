@@ -9,3 +9,4 @@
 #   end
 Service.create(name: 'Service 1')
 Service.create(name: 'Service 2')
+User.create({email: "test@test.com", password:"test123"})
