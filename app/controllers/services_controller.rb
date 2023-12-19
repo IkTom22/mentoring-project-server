@@ -3,9 +3,15 @@ class ServicesController < ApplicationController
 
   # GET /services
   def index
-    @services = Service.all
+    puts "Hello ----#{user_signed_in?}"
+    if user_signed_in?
+      @services = Service.all
 
-    render json: @services
+      render json: @services
+    else
+      head :unauthorized
+      return
+    end  
   end
 
   # GET /services/1
